@@ -122,3 +122,30 @@ input {
 #b4:checked ~ .text-and-controls .navigation label[for="b4"] span {
     background-color: black;
 }
+
+@media(max-width: 768px) {
+    .text-and-controls {
+        flex-direction: column;
+    }
+    .navigation {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        order: 2;
+    }
+    .text-container {
+        width: 100%;
+        padding: 0;
+        order: 3;
+    }
+}
+
+@media(max-width: 600px) {
+    .nav-item span{
+        width: 2rem;
+        height: 2rem;
+    }
+    .text {
+        font-size: 2rem;
+    }
+}
