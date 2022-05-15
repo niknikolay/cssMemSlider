@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(11, 10, 10);
+}
+
+.wrapper {
+    max-width: 60rem;
+    background-color: rgb(11, 10, 10);
+    margin: auto;
+    padding: 1rem;
+}
+.container {
+    max-width: 60rem;
+    height: auto;
+    overflow: hidden;
+}
+.slider {
+    display: flex;
+    width: 400%;
+    height: 100%;
+    transition: .5s;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+input {
+    display: none;
+}
+
+.text-and-controls {
+    display: flex;
+}
+
+.navigation {
+    display: flex;
+    width: 50%;
+    justify-content: end;
+    align-items: center;
+    order: 3;
+}
+
+
+.nav-item {
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.nav-item span{
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 0.1rem solid rgb(57, 57, 197);
+    background-color: rgb(57, 57, 197);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.nav-item:hover span{
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.nav-item:active span{
+    background-color: rgb(213, 237, 75);
+}
+
+.text-container {
+    width: 50%;
+    padding-top: 0.3rem;
+    overflow: hidden;
+}
+
+.text-carusel {
+    display: flex;
+    align-items: center;
+    width: 400%;
+    transition: .5s;
+}
+
+.text {
+    width: 25%;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+#b1:checked ~ .slider, #b1:checked ~ .text-and-controls .text-container
+.text-carusel {
+    transform: translateX(0);
+}
+#b2:checked ~ .slider, #b2:checked ~ .text-and-controls .text-container
+.text-carusel {
+    transform: translateX(-25%);
+}
+#b3:checked ~ .slider, #b3:checked ~ .text-and-controls .text-container
+.text-carusel {
+    transform: translateX(-50%);
+}
+#b4:checked ~ .slider, #b4:checked ~ .text-and-controls .text-container
+.text-carusel {
+    transform: translateX(-75%);
+}
+
+#b1:checked ~ .text-and-controls .navigation label[for="b1"] span {
+    background-color: black;
+}
+#b2:checked ~ .text-and-controls .navigation label[for="b2"] span {
+    background-color: black;
+}
+#b3:checked ~ .text-and-controls .navigation label[for="b3"] span {
+    background-color: black;
+}
+#b4:checked ~ .text-and-controls .navigation label[for="b4"] span {
+    background-color: black;
+}
